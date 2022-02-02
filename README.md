@@ -27,6 +27,9 @@ Realm Rush will be a tower defense game. The game will be positioned on a grid w
 - Build Timer: Towers will take n-seconds to build
 
 ## Version
+### v1.0.2
+Coordinate system created.
+- CoordinateLabel.cs has been completed to only run in the Unity Editor. It displays the coordinate of each tile on said tile and changes its name to the corresponding coordinate. Automatically updates when moved (only in editor, not in game).
 ### v1.0.1
 TMPro works!!!
 - Intellisence on VSCode doesn't recognise TMPro
