@@ -27,6 +27,11 @@ Realm Rush will be a tower defense game. The game will be positioned on a grid w
 - Build Timer: Towers will take n-seconds to build
 
 ## Version
+### v1.1.0
+- Waypoint.cs script created and attached to tile object (not cube)
+- Created Enemy object with cylinder child object
+- Created Materials for tiles and enemy
+- created EnemyMover.cs script which moves the enemy along a set path. This path is determined by the order in which tiles/waypoints appear in the list in the inspector.
 ### v1.0.2
 Coordinate system created.
 - CoordinateLabel.cs has been completed to only run in the Unity Editor. It displays the coordinate of each tile on said tile and changes its name to the corresponding coordinate. Automatically updates when moved (only in editor, not in game).
