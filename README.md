@@ -41,6 +41,12 @@ Medievel Fantasy with Voxel Art
 
 ## Version
 
+### v1.1.2
+
+- Changed the EnemyMover.cs script to use linear interpolation between waypoints to allow for smoother travel
+- Enemy also now points in the direction they are traelling
+- `waitTime` has been replaced with a speed controlling ranging from 0 to 5.
+
 ### v1.1.1
 
 - Added the Voxel Prefabs fro the GameDev.tv Course.
