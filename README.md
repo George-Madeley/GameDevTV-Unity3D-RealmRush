@@ -41,6 +41,12 @@ Medievel Fantasy with Voxel Art
 
 ## Version
 
+### v1.2.1
+
+- Added a turret to the game
+- Modified the Waypoint.cs so the designer can decide what turret the player can add when they click the tile
+- Created a script named TargetLocator.cs which rotates the turret so it is always pointing at the enemy
+
 ### v1.2.0
 
 - Allowed the user to click on tiles displaying their name on the log
