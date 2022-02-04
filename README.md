@@ -41,6 +41,11 @@ Medievel Fantasy with Voxel Art
 
 ## Version
 
+### v1.2.0
+
+- Allowed the user to click on tiles displaying their name on the log
+- Added a bool to the Waypoint.cs script that allows the designers to decide if the player can place objects on this tile.
+
 ### v1.1.2
 
 - Changed the EnemyMover.cs script to use linear interpolation between waypoints to allow for smoother travel
