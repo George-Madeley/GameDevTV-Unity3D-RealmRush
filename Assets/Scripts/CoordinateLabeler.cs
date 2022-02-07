@@ -7,11 +7,20 @@ using System;
 [ExecuteAlways]
 public class CoordinateLabeler : MonoBehaviour
 {
+    [Tooltip("The Default color for the coordinates")]
+    [SerializeField] Color defaultColor = Color.white;
+    [Tooltip("The Color for the coordinates when a block cannot be placed on the tile")]
+    [SerializeField] Color blockedColor = Color.gray;
+
     TextMeshPro label;
     Vector2Int coordinates = new Vector2Int();
+    Waypoint waypoint;
 
     private void Awake() {
         label = GetComponent<TextMeshPro>();
+        label.enabled = false;
+        waypoint = GetComponentInParent<Waypoint>();
+        DisplayCoordinates();
     }
 
     // Update is called once per frame
@@ -20,6 +29,23 @@ public class CoordinateLabeler : MonoBehaviour
         if(!Application.isPlaying){
             DisplayCoordinates();
             UpdateObjectName();
+        }
+        ColorCoordinates();
+        ToggleLabels();
+    }
+
+    private void ToggleLabels() {
+        if(Input.GetKeyDown(KeyCode.C)) {
+            label.enabled = !label.IsActive();
+        }
+    }
+
+    private void ColorCoordinates()
+    {
+        if (waypoint.IsPlaceable) {
+            label.color = defaultColor;
+        } else {
+            label.color = blockedColor;
         }
     }
 

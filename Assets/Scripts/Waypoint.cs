@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class Waypoint : MonoBehaviour
 {
-    [Tooltip("Can the player place items on this time?")] 
-    [SerializeField] bool isPlaceable;
     [Tooltip("The GameObject/Tower to be created when the user clicks")]
     [SerializeField] GameObject towerPrefab;
+    [Tooltip("Can the player place items on this time?")] 
+    [SerializeField] bool isPlaceable;
+    public bool IsPlaceable { get { return isPlaceable; } }
 
     private void OnMouseDown() {
         if (isPlaceable) {

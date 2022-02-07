@@ -41,6 +41,10 @@ Medievel Fantasy with Voxel Art
 
 ## Version
 
+### v1.2.3
+
+- Added Debugging tools to the CoordinateLabeler.cs script.
+
 ### v1.2.2
 
 - Added particle effects to the turret prefab
