@@ -41,6 +41,12 @@ Medievel Fantasy with Voxel Art
 
 ## Version
 
+### v1.2.2
+
+- Added particle effects to the turret prefab
+- Created a EnemyHealth.cs scripts which decreases the enemy health by one every time a particle collision occurs
+- Attached the EnemyHealth.cs script to the Enemy/Ram prefab
+
 ### v1.2.1
 
 - Added a turret to the game
