@@ -41,6 +41,10 @@ Medievel Fantasy with Voxel Art
 
 ## Version
 
+### v1.2.6
+
+- Improved the targetting system by getting the towers to target the closest enemy relative to them.
+
 ### v1.2.5
 
 - Imporved ObjectPool to instantiate enemy prefabs at the start with a ability to re-use them instead of destroying them.

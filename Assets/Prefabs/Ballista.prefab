@@ -45,6 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7e2970a28720cd4eb208d33577818fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  range: 15
+  projectileParticles: {fileID: 7210695578838674511}
   weapon: {fileID: 3144582324300694500}
 --- !u!1 &6131056645070147807
 GameObject:
