@@ -41,6 +41,11 @@ Medievel Fantasy with Voxel Art
 
 ## Version
 
+### v1.2.4
+
+- Added an empty object named ObjectPool to the hierachy with a script named ObjectPool.cs
+- The scripts spawns in a given enemy prefab every x amount of seconds.
+
 ### v1.2.3
 
 - Added Debugging tools to the CoordinateLabeler.cs script.
