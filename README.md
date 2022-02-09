@@ -41,6 +41,14 @@ Medievel Fantasy with Voxel Art
 
 ## Version
 
+### v1.3.0
+
+- Began developing a currency system.
+- Created a Bank prefab.
+- Created a Bank.cs script containing `Withdraw()` and `Deposit()` methods used to withdraw and deposit money respectfully.
+- Called `Deposit()` any time the enemy is killed.
+- Called `Withdraw()` when the enemy reaches the end.
+
 ### v1.2.6
 
 - Improved the targetting system by getting the towers to target the closest enemy relative to them.
