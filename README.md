@@ -41,6 +41,10 @@ Medievel Fantasy with Voxel Art
 
 ## Version
 
+### v1.2.5
+
+- Imporved ObjectPool to instantiate enemy prefabs at the start with a ability to re-use them instead of destroying them.
+
 ### v1.2.4
 
 - Added an empty object named ObjectPool to the hierachy with a script named ObjectPool.cs

@@ -10,8 +10,7 @@ public class EnemyMover : MonoBehaviour
     [Tooltip("The speed of the enemy")]
     [SerializeField] [Range(0f, 5f)] float speed = 1f;
     
-    void Start()
-    {
+    private void OnEnable() {
         FindPath();
         ReturnToStart();
         StartCoroutine(FollowPath());
@@ -52,6 +51,6 @@ public class EnemyMover : MonoBehaviour
             }
         }
 
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 }

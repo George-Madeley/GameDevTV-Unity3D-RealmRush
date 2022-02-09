@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +11,22 @@ public class ObjectPool : MonoBehaviour
     [SerializeField] GameObject EnemyPrefab;
     [Tooltip("Instantiate Enemies?")]
     [SerializeField] bool isEnemyInstantiating = true;
+    [SerializeField] int poolSize = 5;
+
+    private GameObject[] pool;
+
+    private void Awake() {
+        PopulatePool();
+    }
+
+    private void PopulatePool()
+    {
+        pool = new GameObject[poolSize];
+        for(int i = 0; i < poolSize; i++) {
+            pool[i] = Instantiate(EnemyPrefab, transform);
+            pool[i].SetActive(false);
+        }
+    }
 
     void Start()
     {
@@ -18,8 +35,18 @@ public class ObjectPool : MonoBehaviour
 
     private IEnumerator InstantiateEnemies() {
         while(isEnemyInstantiating) {
-            Instantiate(EnemyPrefab, transform);
+            EnableObjectInPool();
             yield return new WaitForSecondsRealtime(timeBetweenInstantiations);
+        }
+    }
+
+    private void EnableObjectInPool()
+    {
+        foreach(GameObject enemyObject in pool) {
+            if (!enemyObject.activeInHierarchy) {
+                enemyObject.SetActive(true);
+                return;
+            }
         }
     }
 }
