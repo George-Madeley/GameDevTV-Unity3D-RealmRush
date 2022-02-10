@@ -41,6 +41,11 @@ Medievel Fantasy with Voxel Art
 
 ## Version
 
+### V1.3.1
+
+- Created a Tower.cs script responsible for instantiating tower prefabs and taking money out of the bank when doing so.
+- Extended the Bank.cs script to reload the scene once the bank balance is below 0.
+
 ### v1.3.0
 
 - Began developing a currency system.
