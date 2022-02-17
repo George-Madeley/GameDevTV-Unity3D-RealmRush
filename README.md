@@ -41,7 +41,15 @@ Medievel Fantasy with Voxel Art
 
 ## Version
 
-### V1.3.1
+### v1.3.3
+
+- Added a difficulty ramp to the game.
+
+### v1.3.2
+
+- Added UI elements which display the amount of gold a user has.
+
+### v1.3.1
 
 - Created a Tower.cs script responsible for instantiating tower prefabs and taking money out of the bank when doing so.
 - Extended the Bank.cs script to reload the scene once the bank balance is below 0.

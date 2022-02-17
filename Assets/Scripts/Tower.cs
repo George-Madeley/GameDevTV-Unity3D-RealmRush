@@ -15,6 +15,7 @@ public class Tower : MonoBehaviour
 
         if(bank.CurrentBalance >= cost) {
             Instantiate(towerPrefab.gameObject, position, Quaternion.identity);
+            bank.Withdraw(cost);
             return true;
         }
         return false;
