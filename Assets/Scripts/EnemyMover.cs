@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Enemy))]
 public class EnemyMover : MonoBehaviour
 {
     [Tooltip("A list of tiles with waypoint components that the enemy will follow in order.")]
@@ -28,8 +29,10 @@ public class EnemyMover : MonoBehaviour
 
         GameObject parent = GameObject.FindGameObjectWithTag("Path");
         foreach(Transform child in parent.transform) {
-            path.Add(child.GetComponent<Waypoint>());
-
+            Waypoint waypoint = child.GetComponent<Waypoint>();
+            if (waypoint != null) {
+                path.Add(waypoint);
+            }
         }
     }
 
@@ -37,15 +40,18 @@ public class EnemyMover : MonoBehaviour
         transform.position = path[0].transform.position;
     }
 
-    private IEnumerator FollowPath() {
-        foreach(Waypoint waypoint in path){
+    private IEnumerator FollowPath()
+    {
+        foreach (Waypoint waypoint in path)
+        {
             Vector3 startPosition = transform.position;
             Vector3 endPosition = waypoint.transform.position;
             float travelPercent = 0f;
 
             transform.LookAt(endPosition);
 
-            while (travelPercent < 1f) {
+            while (travelPercent < 1f)
+            {
                 travelPercent += Time.deltaTime * speed;
                 transform.position = Vector3.Lerp(startPosition, endPosition, travelPercent);
                 /*
@@ -56,6 +62,11 @@ public class EnemyMover : MonoBehaviour
                 yield return new WaitForEndOfFrame();
             }
         }
+        FinishPath();
+    }
+
+    private void FinishPath()
+    {
         enemy.StealGold();
         gameObject.SetActive(false);
     }

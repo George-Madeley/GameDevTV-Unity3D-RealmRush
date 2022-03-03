@@ -41,6 +41,11 @@ Medievel Fantasy with Voxel Art
 
 ## Version
 
+### v1.3.4
+
+- Refactored code.
+- Created an `Editor` folder to be used to store the `CoordinateLabeller.cs` script before building the game.
+
 ### v1.3.3
 
 - Added a difficulty ramp to the game.

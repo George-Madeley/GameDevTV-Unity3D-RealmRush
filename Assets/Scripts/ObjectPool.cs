@@ -6,12 +6,12 @@ using UnityEngine;
 public class ObjectPool : MonoBehaviour
 {
     [Tooltip("Seconds between each enemy spanwns")]
-    [SerializeField] float timeBetweenInstantiations = 1f;
+    [SerializeField] [Range(0.1f, 30f)] float timeBetweenInstantiations = 1f;
     [Tooltip("Enemy prefab to instantiate")]
     [SerializeField] GameObject EnemyPrefab;
     [Tooltip("Instantiate Enemies?")]
     [SerializeField] bool isEnemyInstantiating = true;
-    [SerializeField] int poolSize = 5;
+    [SerializeField] [Range(0, 50)] int poolSize = 5;
 
     private GameObject[] pool;
 
@@ -36,7 +36,7 @@ public class ObjectPool : MonoBehaviour
     private IEnumerator InstantiateEnemies() {
         while(isEnemyInstantiating) {
             EnableObjectInPool();
-            yield return new WaitForSecondsRealtime(timeBetweenInstantiations);
+            yield return new WaitForSeconds(timeBetweenInstantiations);
         }
     }
 
