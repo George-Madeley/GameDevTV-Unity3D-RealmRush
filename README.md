@@ -41,6 +41,13 @@ Medievel Fantasy with Voxel Art
 
 ## Version
 
+### v1.4.0
+
+- Resdesigned Level.
+- Level now contains two castles.
+- Lvel now contains two oceans.
+- Level now contains trees to block ballistas.
+
 ### v1.3.4
 
 - Refactored code.
