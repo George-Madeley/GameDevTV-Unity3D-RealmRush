@@ -41,6 +41,13 @@ Medievel Fantasy with Voxel Art
 
 ## Version
 
+### v1.5.0
+
+- Started designing new pathfinding algorithm.
+- Created pure C# `Node.cs` script to hold information about a node.
+- Created `GridMananger.cs` component used to hold all nodes.
+- Attached `GrdiManager.cs` to empty object.
+
 ### v1.4.0
 
 - Resdesigned Level.
