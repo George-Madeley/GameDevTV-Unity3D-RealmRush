@@ -41,6 +41,11 @@ Medievel Fantasy with Voxel Art
 
 ## Version
 
+### v1.5.2
+
+- Created the Breadth-first search algorithm.
+- Created a method to bachtrach the search algorithm and build the path.
+
 ### v1.5.1
 
 - Began the creation of a Pathfinder.cs script.
