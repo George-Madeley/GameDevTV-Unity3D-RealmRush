@@ -41,6 +41,11 @@ Medievel Fantasy with Voxel Art
 
 ## Version
 
+### v1.5.1
+
+- Began the creation of a Pathfinder.cs script.
+- Added debugging tools to CoordinateLabeller.cs to display yellow and orange label colors for the path finder.
+
 ### v1.5.0
 
 - Started designing new pathfinding algorithm.
