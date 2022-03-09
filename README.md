@@ -41,6 +41,10 @@ Medievel Fantasy with Voxel Art
 
 ## Version
 
+### v1.5.5
+
+- Finshed the path finding algorithm.
+
 ### v1.5.4
 
 - The find path algorithm will now update if a placed turret obstructs the path.
