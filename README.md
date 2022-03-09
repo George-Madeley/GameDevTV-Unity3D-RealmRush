@@ -41,6 +41,10 @@ Medievel Fantasy with Voxel Art
 
 ## Version
 
+### v1.5.3
+
+- The find path algorithm now takes into account for blocked tiles.
+
 ### v1.5.2
 
 - Created the Breadth-first search algorithm.
