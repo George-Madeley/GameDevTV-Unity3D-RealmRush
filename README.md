@@ -41,6 +41,11 @@ Medievel Fantasy with Voxel Art
 
 ## Version
 
+### v1.6.0
+
+- Added a build time to the turrets.
+- Game course is now complete and the game can now move on to the next stage of development.
+
 ### v1.5.5
 
 - Finshed the path finding algorithm.
